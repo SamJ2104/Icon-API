@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Touch Icon Viewer</title>
+</head>
+<body>
+    <script>
+        // Get the URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const url = urlParams.get('url');
+
+        // Display Apple Touch Icon
+        if (url) {
+            const iconUrl = `${url}/apple-touch-icon.png`;
+            document.body.innerHTML += `<img src="${iconUrl}" alt="Apple Touch Icon">`;
+        } else {
+            document.body.innerHTML += `<p>No URL provided</p>`;
+        }
+    </script>
+</body>
+</html>
